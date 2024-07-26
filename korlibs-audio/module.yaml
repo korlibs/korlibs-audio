@@ -17,7 +17,7 @@ dependencies:
   - com.soywiz:korlibs-time-core:6.0.0: exported
   - com.soywiz:korlibs-math-core:6.0.0: exported
   - com.soywiz:korlibs-math-vector:6.0.0: exported
-  - com.soywiz:korlibs-ffi:6.0.0: exported
+  - com.soywiz:korlibs-ffi-legacy:6.0.0: exported
   - com.soywiz:korlibs-logger:6.0.0: exported
   - com.soywiz:korlibs-annotations:6.0.0: exported
 
