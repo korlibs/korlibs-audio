@@ -1748,7 +1748,7 @@ public abstract class korlibs/audio/sound/SoundChannel : korlibs/audio/sound/Sou
 
 public abstract interface class korlibs/audio/sound/SoundChannelBase : korlibs/audio/sound/SoundProps, korlibs/datastructure/Extra {
 	public abstract fun getState ()Lkorlibs/audio/sound/SoundChannelState;
-	public abstract fun onCompleted (Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function0;)V
+	public fun onCompleted (Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function0;)V
 	public abstract fun pause ()V
 	public abstract fun reset ()V
 	public abstract fun resume ()V
@@ -1796,14 +1796,22 @@ public final class korlibs/audio/sound/SoundChannelGroup : korlibs/audio/sound/S
 }
 
 public abstract interface class korlibs/audio/sound/SoundChannelPlay {
-	public abstract fun play (Lkorlibs/audio/sound/Sound;Lkorlibs/audio/sound/PlaybackParameters;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun play (Lkorlibs/audio/sound/Sound;Lkorlibs/audio/sound/PlaybackParameters;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun play (Lkotlin/coroutines/CoroutineContext;Lkorlibs/audio/sound/Sound;Lkorlibs/audio/sound/PlaybackParameters;)Lkorlibs/audio/sound/SoundChannel;
-	public abstract fun play-QI9ZZ_M (Lkorlibs/audio/sound/Sound;IJLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun play-ph7B00s (Lkotlin/coroutines/CoroutineContext;Lkorlibs/audio/sound/Sound;IJ)Lkorlibs/audio/sound/SoundChannel;
-	public abstract fun playAndWait (Lkorlibs/audio/sound/Sound;Lkorlibs/audio/sound/PlaybackParameters;Lkotlin/jvm/functions/Function3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun playAndWait-Twv8a-c (Lkorlibs/audio/sound/Sound;IJLkotlin/jvm/functions/Function3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun playForever-8Mi8wO0 (Lkorlibs/audio/sound/Sound;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun playForever-SxA4cEA (Lkotlin/coroutines/CoroutineContext;Lkorlibs/audio/sound/Sound;J)Lkorlibs/audio/sound/SoundChannel;
+	public static synthetic fun play$default (Lkorlibs/audio/sound/SoundChannelPlay;Lkorlibs/audio/sound/Sound;Lkorlibs/audio/sound/PlaybackParameters;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun play$default (Lkorlibs/audio/sound/SoundChannelPlay;Lkotlin/coroutines/CoroutineContext;Lkorlibs/audio/sound/Sound;Lkorlibs/audio/sound/PlaybackParameters;ILjava/lang/Object;)Lkorlibs/audio/sound/SoundChannel;
+	public fun play-QI9ZZ_M (Lkorlibs/audio/sound/Sound;IJLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun play-QI9ZZ_M$default (Lkorlibs/audio/sound/SoundChannelPlay;Lkorlibs/audio/sound/Sound;IJLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public fun play-ph7B00s (Lkotlin/coroutines/CoroutineContext;Lkorlibs/audio/sound/Sound;IJ)Lkorlibs/audio/sound/SoundChannel;
+	public static synthetic fun play-ph7B00s$default (Lkorlibs/audio/sound/SoundChannelPlay;Lkotlin/coroutines/CoroutineContext;Lkorlibs/audio/sound/Sound;IJILjava/lang/Object;)Lkorlibs/audio/sound/SoundChannel;
+	public fun playAndWait (Lkorlibs/audio/sound/Sound;Lkorlibs/audio/sound/PlaybackParameters;Lkotlin/jvm/functions/Function3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun playAndWait$default (Lkorlibs/audio/sound/SoundChannelPlay;Lkorlibs/audio/sound/Sound;Lkorlibs/audio/sound/PlaybackParameters;Lkotlin/jvm/functions/Function3;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public fun playAndWait-Twv8a-c (Lkorlibs/audio/sound/Sound;IJLkotlin/jvm/functions/Function3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun playAndWait-Twv8a-c$default (Lkorlibs/audio/sound/SoundChannelPlay;Lkorlibs/audio/sound/Sound;IJLkotlin/jvm/functions/Function3;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public fun playForever-8Mi8wO0 (Lkorlibs/audio/sound/Sound;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun playForever-8Mi8wO0$default (Lkorlibs/audio/sound/SoundChannelPlay;Lkorlibs/audio/sound/Sound;JLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public fun playForever-SxA4cEA (Lkotlin/coroutines/CoroutineContext;Lkorlibs/audio/sound/Sound;J)Lkorlibs/audio/sound/SoundChannel;
+	public static synthetic fun playForever-SxA4cEA$default (Lkorlibs/audio/sound/SoundChannelPlay;Lkotlin/coroutines/CoroutineContext;Lkorlibs/audio/sound/Sound;JILjava/lang/Object;)Lkorlibs/audio/sound/SoundChannel;
 }
 
 public final class korlibs/audio/sound/SoundChannelPlay$DefaultImpls {
@@ -1861,14 +1869,22 @@ public final class korlibs/audio/sound/SoundKt {
 }
 
 public abstract interface class korlibs/audio/sound/SoundPlay {
-	public abstract fun play (Lkorlibs/audio/sound/PlaybackParameters;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun play (Lkorlibs/audio/sound/PlaybackParameters;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun play (Lkotlin/coroutines/CoroutineContext;Lkorlibs/audio/sound/PlaybackParameters;)Lkorlibs/audio/sound/SoundChannel;
-	public abstract fun play-XFcaBq0 (IJLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun play-smDEYrI (Lkotlin/coroutines/CoroutineContext;IJ)Lkorlibs/audio/sound/SoundChannel;
-	public abstract fun playAndWait (Lkorlibs/audio/sound/PlaybackParameters;Lkotlin/jvm/functions/Function3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun playAndWait-sHvJXaI (IJLkotlin/jvm/functions/Function3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun playForever-HG0u8IE (Lkotlin/coroutines/CoroutineContext;J)Lkorlibs/audio/sound/SoundChannel;
-	public abstract fun playForever-VtjQ1oo (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun play$default (Lkorlibs/audio/sound/SoundPlay;Lkorlibs/audio/sound/PlaybackParameters;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun play$default (Lkorlibs/audio/sound/SoundPlay;Lkotlin/coroutines/CoroutineContext;Lkorlibs/audio/sound/PlaybackParameters;ILjava/lang/Object;)Lkorlibs/audio/sound/SoundChannel;
+	public fun play-XFcaBq0 (IJLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun play-XFcaBq0$default (Lkorlibs/audio/sound/SoundPlay;IJLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public fun play-smDEYrI (Lkotlin/coroutines/CoroutineContext;IJ)Lkorlibs/audio/sound/SoundChannel;
+	public static synthetic fun play-smDEYrI$default (Lkorlibs/audio/sound/SoundPlay;Lkotlin/coroutines/CoroutineContext;IJILjava/lang/Object;)Lkorlibs/audio/sound/SoundChannel;
+	public fun playAndWait (Lkorlibs/audio/sound/PlaybackParameters;Lkotlin/jvm/functions/Function3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun playAndWait$default (Lkorlibs/audio/sound/SoundPlay;Lkorlibs/audio/sound/PlaybackParameters;Lkotlin/jvm/functions/Function3;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public fun playAndWait-sHvJXaI (IJLkotlin/jvm/functions/Function3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun playAndWait-sHvJXaI$default (Lkorlibs/audio/sound/SoundPlay;IJLkotlin/jvm/functions/Function3;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public fun playForever-HG0u8IE (Lkotlin/coroutines/CoroutineContext;J)Lkorlibs/audio/sound/SoundChannel;
+	public static synthetic fun playForever-HG0u8IE$default (Lkorlibs/audio/sound/SoundPlay;Lkotlin/coroutines/CoroutineContext;JILjava/lang/Object;)Lkorlibs/audio/sound/SoundChannel;
+	public fun playForever-VtjQ1oo (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun playForever-VtjQ1oo$default (Lkorlibs/audio/sound/SoundPlay;JLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 }
 
 public final class korlibs/audio/sound/SoundPlay$DefaultImpls {

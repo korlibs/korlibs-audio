@@ -32,7 +32,7 @@ object S3M : BaseModuleTracker.Format("s3m") {
     override fun createTracker(): BaseModuleTracker = Screamtracker()
     override suspend fun fastValidate(data: AsyncStream): Boolean {
         val buffer = data.sliceStart(0x2c).readBytesExact(4)
-        val signature = CharArray(4) { buffer[it].toChar() }.concatToString()
+        val signature = CharArray(4) { buffer[it].toInt().toChar() }.concatToString()
         return signature == "SCRM"
     }
 }

@@ -33,7 +33,7 @@ object MOD : BaseModuleTracker.Format("mod") {
     override fun createTracker(): BaseModuleTracker = Protracker()
     override suspend fun fastValidate(data: AsyncStream): Boolean {
         val bytes = data.sliceStart(1080).readBytesExact(4)
-        val signature = CharArray(4) { bytes[it].toChar() }.concatToString()
+        val signature = CharArray(4) { bytes[it].toInt().toChar() }.concatToString()
         val channels = when (signature) {
             "M.K.", "M!K!", "4CHN", "FLT4" -> 4
             "6CHN" -> 6
