@@ -11,16 +11,16 @@ aliases:
   - jsAndWasmJs: [ js, wasm ]
 
 dependencies:
-  - com.soywiz:korlibs-audio-core:6.0.0: exported
-  - com.soywiz:korlibs-concurrent:6.0.0: exported
-  - com.soywiz:korlibs-io-vfs:6.0.0: exported
-  - com.soywiz:korlibs-time-core:6.0.0: exported
-  - com.soywiz:korlibs-math-core:6.0.0: exported
-  - com.soywiz:korlibs-math-vector:6.0.0: exported
-  - com.soywiz:korlibs-ffi-legacy:6.0.0: exported
-  - com.soywiz:korlibs-logger:6.0.0: exported
-  - com.soywiz:korlibs-annotations:6.0.0: exported
+  - org.korge:korlibs-audio-core:6.1.0: exported
+  - org.korge:korlibs-concurrent:6.1.0: exported
+  - org.korge:korlibs-io-vfs:6.1.0: exported
+  - org.korge:korlibs-time-core:6.1.0: exported
+  - org.korge:korlibs-math-core:6.1.0: exported
+  - org.korge:korlibs-math-vector:6.1.0: exported
+  - org.korge:korlibs-ffi-legacy:6.1.1: exported
+  - org.korge:korlibs-logger:6.1.0: exported
+  - org.korge:korlibs-annotations:6.1.0: exported
 
 test-dependencies:
-  - org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0-RC
-  - com.soywiz:korlibs-io:6.0.0
+  - org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2
+  - org.korge:korlibs-io:6.1.0
