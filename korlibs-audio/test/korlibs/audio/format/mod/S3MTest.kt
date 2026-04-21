@@ -1,9 +1,23 @@
 package korlibs.audio.format.mod
 
+import korlibs.io.stream.openAsync
 import korlibs.memory.*
+import kotlinx.coroutines.test.runTest
 import kotlin.test.*
 
 class S3MTest {
+
+	@Test
+	fun testS3MFormatValidation() = runTest {
+		"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxSCRMxxxxxxx".encodeToByteArray().openAsync().also { stream ->
+			val result = S3M.fastValidate(stream)
+			assertEquals(true, result)
+		}
+		"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx".encodeToByteArray().openAsync().also { stream ->
+			val result = S3M.fastValidate(stream)
+			assertEquals(false, result)
+		}
+	}
 
 	@Test
 	fun testPeriodTableAndRetrigTable() {
